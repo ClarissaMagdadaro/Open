@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for You</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(270deg, #fbe7c6, #ffabab, #ff6f61);
+            background-size: 600% 600%;
+            animation: backgroundMove 10s ease infinite, heartsMove 10s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes heartsMove {
+            0% { background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23FF6F61%22 d=%22M50 88c-3 0-5-1-7-2-9-6-17-11-24-19-11-13-14-24-14-33C5 21 14 12 26 12c6 0 12 3 16 9 4-6 10-9 16-9 12 0 21 9 21 22 0 9-3 20-14 33-7 8-15 13-24 19-2 1-4 2-7 2z%22/%3E%3C/svg%3E'); }
+            50% { background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23ffabab%22 d=%22M50 88c-3 0-5-1-7-2-9-6-17-11-24-19-11-13-14-24-14-33C5 21 14 12 26 12c6 0 12 3 16 9 4-6 10-9 16-9 12 0 21 9 21 22 0 9-3 20-14 33-7 8-15 13-24 19-2 1-4 2-7 2z%22/%3E%3C/svg%3E'); }
+            100% { background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23FF6F61%22 d=%22M50 88c-3 0-5-1-7-2-9-6-17-11-24-19-11-13-14-24-14-33C5 21 14 12 26 12c6 0 12 3 16 9 4-6 10-9 16-9 12 0 21 9 21 22 0 9-3 20-14 33-7 8-15 13-24 19-2 1-4 2-7 2z%22/%3E%3C/svg%3E'); }
+        }
+
+        .message-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #ffabab;
+            max-width: 500px;
+            position: relative;
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 2.5em;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+        .message-box:before {
+            content: "💌";
+            font-size: 3em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .footer:before {
+            content: "🌸";
+            font-size: 1.5em;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Image Popping Out */
+        .image-container {
+            position: relative;
+            width: 120px;
+            margin: 0 auto;
+            transform: translateY(-30px);
+            animation: popOut 2s infinite ease-in-out;
+        }
+        .image-container img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 3px solid #ffabab;
+        }
+
+        /* Animation for Image */
+        @keyframes popOut {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-box">
+        <div class="image-container">
+            <img src="459890310_771595565056167_4439085179636423876_n.jpg" alt="Image">
+        </div>
+        <h1>Hello, Good day!</h1>
+        <p>Kis'a lang ko ga code kay sako maging SA, and kabalo ko nga gusto mo makipag-friends and I totally understand that, pero as a sign of respect, nugay chat sa miga ko.</p>
+        <p>Good luck sa IT journey mo. 2nd year ka palang ah, tun'e na daan ang Linux para mag 4th year hindi ka ayawan. God Bless!</p>
+        <div class="footer">Made with care 💖</div>
+    </div>
+
+</body>
+</html>
