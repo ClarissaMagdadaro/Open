@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message for You</title>
     <style>
-        body {
+           body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             background: linear-gradient(270deg, #fbe7c6, #ffabab, #ff6f61);
             background-size: 600% 600%;
@@ -16,13 +16,11 @@
             height: 100vh;
             margin: 0;
         }
-
         @keyframes backgroundMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         .message-box {
             background-color: #fff;
             padding: 30px;
@@ -32,32 +30,26 @@
             border: 2px solid #ffabab;
             max-width: 500px;
             position: relative;
-            overflow: hidden; /* Ensures animations stay within box */
         }
-
         h1 {
             color: #ff6f61;
             font-size: 2.5em;
         }
-
         p {
             color: #555;
             font-size: 1.2em;
         }
-
         .message-box:before {
             content: "💌";
             font-size: 3em;
             display: block;
             margin-bottom: 15px;
         }
-
         .footer {
             margin-top: 20px;
             font-size: 0.9em;
             color: #888;
         }
-
         .footer:before {
             content: "🌸";
             font-size: 1.5em;
@@ -65,14 +57,41 @@
             margin-right: 10px;
         }
 
-        /* Couple Icon */
-        .animated-couple {
+        /* Animated Heart */
+        .animated-heart {
             position: absolute;
-            top: -50px; /* Adjust to position above the mail emoji */
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 2.5em;
+            font-size: 3em;
+            color: #ff6f61;
             animation: bounce 2s infinite ease-in-out;
+        }
+
+        /* Image Popping Out */
+        .image-container {
+            position: relative;
+            width: 120px;
+            margin: 0 auto;
+            transform: translateY(-30px);
+            animation: popOut 2s infinite ease-in-out;
+        }
+        .image-container img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 3px solid #ffabab;
+        }
+
+        /* Animation for Image */
+        @keyframes popOut {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         /* Bouncing Animation */
@@ -81,14 +100,8 @@
                 transform: translate(-50%, 0);
             }
             50% {
-                transform: translate(-50%, -15px);
+                transform: translate(-50%, -20px);
             }
-        }
-
-        /* Pop-up effect */
-        .message-box:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
         }
     </style>
 </head>
