@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for You</title>
+    <style>
+           body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(270deg, #fbe7c6, #ffabab, #ff6f61);
+            background-size: 600% 600%;
+            animation: backgroundMove 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .message-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #ffabab;
+            max-width: 500px;
+            position: relative;
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 2.5em;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+        .message-box:before {
+            content: "💌";
+            font-size: 3em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .footer:before {
+            content: "🌸";
+            font-size: 1.5em;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Animated Heart */
+        .animated-heart {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            color: #ff6f61;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        /* Image Popping Out */
+        .image-container {
+            position: relative;
+            width: 120px;
+            margin: 0 auto;
+            transform: translateY(-30px);
+            animation: popOut 2s infinite ease-in-out;
+        }
+        .image-container img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 3px solid #ffabab;
+        }
+
+        /* Animation for Image */
+        @keyframes popOut {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Bouncing Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, -20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-box">
+        <div class="animated-heart">❤️</div>
+        <h1>Hello, Good day!</h1>
+        <p> You know I don’t always code because I’m busy pero daw nag ka time ko now. I know you want to be friends kay MANANG mo nadia, and I totally understand that. However, as a sign of respect, nugay sagi chat sa miga ko. </p>
+        <p> and friendly reminder lang kay 2nd year IT ka gali tun'e na daan ang Linux para hindi ka ayawan mag 4th year. Good luck and God Bless!</p>
+        <div class="footer">Made with care 💖</div>
+    </div>
+
+</body>
+</html>
