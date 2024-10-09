@@ -9,27 +9,18 @@
             font-family: 'Comic Sans MS', cursive, sans-serif;
             background: linear-gradient(270deg, #fbe7c6, #ffabab, #ff6f61);
             background-size: 600% 600%;
-            animation: backgroundMove 10s ease infinite, heartsMove 10s linear infinite;
+            animation: backgroundMove 10s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden;
         }
-
         @keyframes backgroundMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        @keyframes heartsMove {
-            0% { background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23FF6F61%22 d=%22M50 88c-3 0-5-1-7-2-9-6-17-11-24-19-11-13-14-24-14-33C5 21 14 12 26 12c6 0 12 3 16 9 4-6 10-9 16-9 12 0 21 9 21 22 0 9-3 20-14 33-7 8-15 13-24 19-2 1-4 2-7 2z%22/%3E%3C/svg%3E'); }
-            50% { background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23ffabab%22 d=%22M50 88c-3 0-5-1-7-2-9-6-17-11-24-19-11-13-14-24-14-33C5 21 14 12 26 12c6 0 12 3 16 9 4-6 10-9 16-9 12 0 21 9 21 22 0 9-3 20-14 33-7 8-15 13-24 19-2 1-4 2-7 2z%22/%3E%3C/svg%3E'); }
-            100% { background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Cpath fill=%22%23FF6F61%22 d=%22M50 88c-3 0-5-1-7-2-9-6-17-11-24-19-11-13-14-24-14-33C5 21 14 12 26 12c6 0 12 3 16 9 4-6 10-9 16-9 12 0 21 9 21 22 0 9-3 20-14 33-7 8-15 13-24 19-2 1-4 2-7 2z%22/%3E%3C/svg%3E'); }
-        }
-
         .message-box {
             background-color: #fff;
             padding: 30px;
@@ -48,9 +39,8 @@
             color: #555;
             font-size: 1.2em;
         }
-        /* Caricature representation */
         .message-box:before {
-            content: "👨‍❤️‍👨"; /* A couple emoji as a placeholder for caricatures */
+            content: "💌";
             font-size: 3em;
             display: block;
             margin-bottom: 15px;
@@ -66,14 +56,36 @@
             display: inline-block;
             margin-right: 10px;
         }
+
+        /* Animated Heart */
+        .animated-heart {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            color: #ff6f61;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        /* Bouncing Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, -20px);
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="message-box">
+        <div class="animated-heart">❤️</div>
         <h1>Hello, Good day!</h1>
-        <p>Kis'a lang ko ga code kay sako maging SA, and kabalo ko nga gusto mo makipag-friends and I totally understand that, pero as a sign of respect, nugay chat sa miga ko.</p>
-        <p>Good luck sa IT journey mo. 2nd year ka palang ah, tun'e na daan ang Linux para mag 4th year hindi ka ayawan. God Bless!</p>
+        <p>Kis'a lang ko ga code kay sako maging SA, and kabalo ko nga gusto mo makipag-friends. <strong>I totally understand that, pero as a sign of respect, nugay chat sa miga ko.</strong></p>
+        <p>Good luck sa IT journey mo. <strong>2nd year ka palang ah, tun'e na daan ang Linux!</strong> God Bless!</p>
         <div class="footer">Made with care 💖</div>
     </div>
 
