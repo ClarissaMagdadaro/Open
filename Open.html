@@ -16,11 +16,13 @@
             height: 100vh;
             margin: 0;
         }
+
         @keyframes backgroundMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
         .message-box {
             background-color: #fff;
             padding: 30px;
@@ -30,26 +32,32 @@
             border: 2px solid #ffabab;
             max-width: 500px;
             position: relative;
+            overflow: hidden; /* Ensures animations stay within box */
         }
+
         h1 {
             color: #ff6f61;
             font-size: 2.5em;
         }
+
         p {
             color: #555;
             font-size: 1.2em;
         }
+
         .message-box:before {
             content: "💌";
             font-size: 3em;
             display: block;
             margin-bottom: 15px;
         }
+
         .footer {
             margin-top: 20px;
             font-size: 0.9em;
             color: #888;
         }
+
         .footer:before {
             content: "🌸";
             font-size: 1.5em;
@@ -57,14 +65,13 @@
             margin-right: 10px;
         }
 
-        /* Animated Heart */
-        .animated-heart {
+        /* Couple Icon */
+        .animated-couple {
             position: absolute;
-            top: -30px;
+            top: -50px; /* Adjust to position above the mail emoji */
             left: 50%;
             transform: translateX(-50%);
-            font-size: 3em;
-            color: #ff6f61;
+            font-size: 2.5em;
             animation: bounce 2s infinite ease-in-out;
         }
 
@@ -74,15 +81,21 @@
                 transform: translate(-50%, 0);
             }
             50% {
-                transform: translate(-50%, -20px);
+                transform: translate(-50%, -15px);
             }
+        }
+
+        /* Pop-up effect */
+        .message-box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
 <body>
 
     <div class="message-box">
-        <div class="animated-heart">❤️</div>
+        <div class="animated-couple">👫</div> <!-- Couple emoji as a placeholder -->
         <h1>Hello, Good day!</h1>
         <p>Kis'a lang ko ga code kay sako maging SA, and kabalo ko nga gusto mo makipag-friends. <strong>I totally understand that, pero as a sign of respect, nugay chat sa miga ko.</strong></p>
         <p>Good luck sa IT journey mo. <strong>2nd year ka palang ah, tun'e na daan ang Linux!</strong> God Bless!</p>
